@@ -1,0 +1,49 @@
+.header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.header .nav a {
+    position: relative;
+    text-decoration: none;
+    color: #3d628c;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition:color 0.2s ease;
+}
+
+.header .nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #3d628c;
+    transition: width 0.3s ease;
+}
+
+.header .nav a:hover::after {
+    width: 100%;
+}
+.header .nav a:hover{
+    color: #29415d;
+}
+.header .logo {
+   font-size: 1.2rem; 
+   font-weight: 700;
+   color: #29415d;
+   transition: transform 0.3s ease, color 0.3s ease; /* smooth grow & color */
+}
+
+.header .logo:hover {
+   transform: scale(1.2); /* grows smoothly */
+   color: #3d628c;        /* darkens/fades to new color */
+}
+
+
+
+

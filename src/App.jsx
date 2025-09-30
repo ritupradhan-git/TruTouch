@@ -14,7 +14,6 @@ function App() {
       <main>
         <AboutUs />
         <ProjectDescription />
-        <Demonstration />
         <PhotoGallery />
         <ContactUs />
       </main>

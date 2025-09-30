@@ -1,0 +1,337 @@
+
+
+/* Project Description Section */
+#project-description {
+    background-color: rgb(255, 255, 255);
+    margin: 80px auto; /* Reduced margin, centered with auto for better responsiveness */
+    padding: 40px; /* Added internal padding */
+    max-width: 1200px; /* Max width to prevent it from getting too wide on large screens */
+    border-radius: 12px; /* Slightly more rounded corners for the section */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More pronounced, soft shadow */
+}
+
+/* Section Title */
+.section-title{
+    font-size: 3rem; /* Slightly larger for impact */
+    font-weight: 800; /* Bolder */
+    color: #2c2c2c;
+    margin-bottom: 40px; /* More space below title */
+    text-align: center;
+    line-height: 1.2;
+}
+.section-title span{
+    font-size: 3rem; /* Match parent */
+    font-weight: 800;
+    color: #007bff; /* Highlight "TruTouch." with a primary brand color */
+    display: block; /* Make "TruTouch." on its own line for emphasis */
+    margin-bottom: 10px; /* Small space below the span */
+}
+
+/* Card Styling */
+.card{
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 12px; /* Slightly more rounded corners */
+    
+    padding: 30px; /* Increased padding inside cards */
+    margin: 30px 0; /* More vertical spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Card Layouts */
+.first-card, .second-card{
+    display: flex;
+    align-items: center; /* Vertically center content */
+    gap: 40px; /* Add space between image and text */
+}
+
+.first-card .card-image-wrapper, .second-card .card-image-wrapper{
+    flex-shrink: 0; /* Prevent image wrapper from shrinking */
+    width: 50%; /* Slightly adjust width for text */
+    padding: 0; /* Remove padding as gap handles spacing */
+    display: flex; /* Use flex for image alignment */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+.first-card .card-image-wrapper img, .second-card .card-image-wrapper img{
+    width: 100%; /* Make image fill its wrapper */
+    max-width: 350px; /* Max width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for images */
+}
+.first-card .card-text, .second-card .card-text{
+    width: 55%; /* Slightly adjust width for text */
+}
+
+.first-card .card-heading {
+    font-size: 2rem;
+    color: #007bff; /* Use primary color for card headings */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.second-card .card-heading {
+    font-size: 2rem;
+    color: #007bff; /* Use primary color for card headings */
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: right; /* Align heading to the right for the second card */
+}
+
+.first-card .card-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+.second-card .card-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: right; /* Align text to the right for the second card */
+}
+
+
+/* Scroll Container (New additions for styling and basic animation setup) */
+.scroll-container {
+    overflow: hidden; /* Hide anything outside the container */
+    margin: 60px 0;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.1); /* Inner shadow for depth */
+}
+
+.scroll-content {
+    display: flex;
+    white-space: nowrap; /* Keep all spans on one line */
+    animation: scrollText 30s linear infinite; /* Basic scroll animation */
+}
+
+.scroll-content span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0056b3; /* Darker blue for text */
+    padding: 0 40px; /* Spacing between items */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0; /* Prevent spans from shrinking */
+    display: flex;
+    align-items: center;
+}
+.scroll-content span:not(:last-child)::after {
+    content: "•"; /* Dot separator */
+    margin-left: 40px;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scrolls half the content length */
+}
+
+
+/* Progress Container */
+.progress-container {
+    display: flex;
+    justify-content: center; /* Center the whole container */
+    align-items: center;
+    margin: 80px 0;
+    position: relative;
+    /* Optional: Add a max-width to control overall layout */
+    max-width: 1200px; /* Example max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-step {
+    text-align: center;
+    /* Removed flex: 1; as we'll control spacing with gaps/margins */
+    padding: 0 30px; /* Increase horizontal padding around each step if needed */
+    position: relative; /* Needed for positioning step titles */
+}
+
+.progress-step h2 { /* Added for the titles like "Current Stage" */
+    font-size: 2.5rem; /* Adjust as per your screenshot */
+    margin-bottom: 30px; /* Space between title and circle */
+    color: #333; /* Darker text for titles */
+    font-weight: 700;
+}
+
+.progress-circle {
+    width: 300px; /* Slightly larger circles might fit text better */
+    height: 300px; /* Make them equal for a perfect circle */
+    background-color: #007bff; /* Primary color */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 auto; /* Center circle horizontally */
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3); /* Soft shadow for circles */
+    padding: 30px; /* More padding inside */
+    box-sizing: border-box; /* Include padding in width/height */
+    text-align: center; /* Ensure text inside is centered */
+}
+
+/* We don't need h3 inside the circle if only paragraph text is there.
+   If you want a bold first line, you can make the first <p> bold in HTML. */
+/* .progress-circle h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+} */
+
+.progress-circle p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.6; /* Better line spacing */
+    opacity: 0.95; /* Make text slightly less transparent */
+    margin: 0; /* Remove default paragraph margins */
+}
+
+.progress-line {
+    position: absolute;
+    top: calc(50% + 25px); /* Adjust to be below titles and slightly above circle center */
+    left: 50%; /* Start line from the middle of the first step */
+    right: 50%; /* End line at the middle of the second step */
+    width: calc(100% - 600px - 120px); /* Adjust based on circle width and step padding. This is a bit tricky, alternative below. */
+    height: 4px;
+    background-color: #004992; /* Lighter line color */
+    z-index: -1; /* Place behind circles */
+    transform: translateY(-50%);
+    /* Simpler approach for line between two elements: */
+    /* Place this element *between* the two progress-step divs in HTML */
+}
+
+/* Simpler Line Implementation (if HTML structure is adjusted) */
+.connecting-line {
+    height: 4px;
+    background-color: #001429;
+    width: calc(100% - (300px * 2) - (60px * 2)); /* Container width - total circle width - total step padding */
+    margin: 0 -30px; /* Negative margin to tuck it between circles */
+    z-index: -1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    #project-description {
+        margin: 50px auto;
+        padding: 30px;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .section-title span {
+        font-size: 2.5rem;
+    }
+    .first-card, .second-card {
+        flex-direction: column; /* Stack cards vertically */
+        text-align: center;
+    }
+    .first-card .card-image-wrapper, .second-card .card-image-wrapper,
+    .first-card .card-text, .second-card .card-text {
+        width: 100%; /* Full width for stacked items */
+        padding: 0;
+    }
+    .first-card .card-image-wrapper img, .second-card .card-image-wrapper img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+        margin-bottom: 20px;
+    }
+    .second-card .card-text {
+        order: 2; /* Ensure text comes after image on second card when stacked */
+    }
+    .second-card .card-image-wrapper {
+        order: 1; /* Ensure image comes before text on second card when stacked */
+    }
+
+    .card-heading {
+        font-size: 1.8rem;
+    }
+    .card-text p {
+        font-size: 1rem;
+    }
+
+    .scroll-content span {
+        font-size: 1.2rem;
+        padding: 0 30px;
+    }
+    .scroll-content span:not(:last-child)::after {
+        margin-left: 30px;
+    }
+
+    .progress-container {
+        flex-direction: column; /* Stack progress steps vertically */
+    }
+    .progress-step {
+        margin-bottom: 40px; /* Space between stacked steps */
+    }
+    .progress-line {
+        height: auto; /* Allow height to adjust */
+        width: 4px; /* Vertical line */
+        top: 25%; /* Start line from first circle */
+        bottom: 25%; /* End line at second circle */
+        left: 50%; /* Center line horizontally */
+        right: auto;
+        transform: translateX(-50%); /* Adjust for centering */
+    }
+    .progress-circle {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+    .progress-circle h3 {
+        font-size: 1.5rem;
+    }
+    .progress-circle p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #project-description {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .section-title span {
+        font-size: 2rem;
+    }
+    .card {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    .card-heading {
+        font-size: 1.5rem;
+    }
+    .card-text p {
+        font-size: 0.95rem;
+    }
+    .scroll-container {
+        margin: 40px 0;
+        padding: 15px 0;
+    }
+    .scroll-content span {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    .scroll-content span:not(:last-child)::after {
+        margin-left: 20px;
+    }
+    .progress-circle {
+        width: 180px;
+        height: 180px;
+    }
+    .progress-circle h3 {
+        font-size: 1.3rem;
+    }
+    .progress-circle p {
+        font-size: 0.85rem;
+    }
+}

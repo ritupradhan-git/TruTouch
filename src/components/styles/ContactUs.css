@@ -1,0 +1,220 @@
+/* ContactUs.css */
+#contact-us .left h2,
+#contact-us .left p {
+    margin: 0;  /* remove default margin */
+    padding: 0; /* optional */
+}
+
+#contact-us {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Changed to center to balance the gap */
+    align-items: center;
+    gap: 120px; /* Increased gap for more space between left and right */
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #f9f9f9;
+    color: #333;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    max-width: 1200px; /* Optional: Constrain overall width for better centering */
+}
+
+#contact-us .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1; /* Allows left to grow but respects max-width */
+    max-width: 450px; /* Limit the maximum width of the left section */
+    min-width: 280px; /* Ensure left section has a reasonable minimum width */
+    padding: 20px;
+    gap: 15px; /* Slightly increased gap for internal elements */
+}
+
+#contact-us .left h2 {
+    font-size: 2.8em; /* Slightly larger for impact */
+    color: #007bff; /* A prominent color for the heading */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+#contact-us .left p {
+    width: 100%;
+    font-size: 1.1em; /* Slightly larger for readability */
+    line-height: 1.7;
+    color: #555; /* Slightly softer color for body text */
+    opacity: 0.9;
+}
+
+#contact-us .right {
+    flex: 1; /* Allows right to grow but respects max-width */
+    max-width: 400px; /* Make the right section slightly narrower */
+    min-width: 280px; /* Ensure right section has a reasonable minimum width */
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Slightly more rounded corners */
+    border: 3px solid #909090; /* Softer border */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* More subtle and spread out shadow */
+    padding: 20px; /* Slightly more internal padding */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* More pronounced hover effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.card h2 {
+    font-size: 1.7em; /* Slightly larger card title */
+    
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    gap: 20px; /* Increased gap between social icons */
+    
+}
+
+.social-links a,
+.social-links .mail {
+    font-size: 1.5em; /* Slightly larger icons */
+    color: #007bff; /* Consistent icon color */
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-links a:hover,
+.social-links .mail:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+/* Email box initially hidden */
+.mail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.email-box {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  opacity: 0;
+  padding: 8px 12px;
+  background: #9a9a9a;
+  color: #323232;
+  border-radius: 8px;
+  border: 2px solid #2c2c2c;
+  display: flex;
+  align-items: center;
+  font-size: 0.5em;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.3s ease, opacity 0.3s ease, background 0.2s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) { /* Added a breakpoint for slightly larger screens */
+    #contact-us {
+        gap: 80px; /* Reduce gap slightly for medium screens */
+        padding: 80px 40px;
+    }
+
+    #contact-us .left {
+        max-width: 100%; /* Allow full width if needed */
+        min-width: unset;
+    }
+
+    #contact-us .right {
+        max-width: 350px; /* Keep cards a bit narrower */
+        min-width: unset;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #contact-us {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        padding: 50px 20px; /* Adjusted padding */
+        gap: 50px; /* Gap between stacked sections */
+    }
+
+    #contact-us .left,
+    #contact-us .right {
+        min-width: unset; /* Remove min-width for better stacking */
+        width: 100%; /* Take full width */
+        max-width: 500px; /* Constrain max width for better readability on small screens */
+        text-align: center; /* Center text when stacked */
+        align-items: center; /* Center items when stacked */
+    }
+
+    #contact-us .left h2 {
+        font-size: 2.2em;
+    }
+
+    #contact-us .left p {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px; /* Adjusted padding for smaller cards */
+    }
+
+    .card h2 {
+        font-size: 1.6em;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-links a,
+    .social-links .mail {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact-us {
+        padding: 30px 15px;
+        gap: 40px;
+    }
+
+    #contact-us .left h2 {
+        font-size: 2em;
+    }
+
+    #contact-us .left p {
+        font-size: 0.95em;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h2 {
+        font-size: 1.4em;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a,
+    .social-links .mail {
+        font-size: 1.6em;
+    }
+}

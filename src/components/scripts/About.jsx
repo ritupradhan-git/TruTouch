@@ -4,11 +4,20 @@ import '../styles/About.css';
 function AboutUs() {
   return (
     <section id="about-us" className="section">
-      <h2>About TruTouch</h2>
-      <p>
-        At Rootach, we are dedicated to revolutionizing access to prosthetic technology. Our mission is to develop an affordable, high-functionality AMG-controlled prosthetic hand, making advanced limb replacement accessible to a wider population. We believe everyone deserves the opportunity for enhanced independence and quality of life.
-      </p>
-      {/* Add team photos, more detailed mission statement */}
+      <div className="left"><h1>
+        Developing Accessible Technology for All.
+      </h1>
+        <p>
+          For the experience of nearest human touch.
+        </p>
+        <div className="buttons">
+          <input type="button" value="Learn More" />
+          <input type="button" value="Connect with Us" />
+        </div>
+      </div>
+      <div className="right">
+        <img src="" alt="About Us" />
+      </div>
     </section>
   );
 }

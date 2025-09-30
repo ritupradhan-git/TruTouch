@@ -1,0 +1,27 @@
+.footer {
+  background-color: #1a3d7c; /* Dark primary color */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: "Alan Sans", sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer text */
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer p {
+    font-size: 0.95rem;
+  }
+}

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .header .nav a {
@@ -24,6 +24,7 @@
     width: 0;
     background-color: #3d628c;
     transition: width 0.3s ease;
+    color: #182636;
 }
 
 .header .nav a:hover::after {

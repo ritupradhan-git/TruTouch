@@ -1,8 +1,9 @@
 /* General Gallery Section Styling */
 .gallery-section {
+  width: 85%;
+  margin: 0 auto;
   font-family: 'Arial', sans-serif;
   text-align: center;
-  background-color: #f9f9f9;
   color: #333;
 }
 

@@ -6,6 +6,7 @@
 }
 
 #contact-us {
+    width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: center; /* Changed to center to balance the gap */
@@ -13,7 +14,6 @@
     gap: 120px; /* Increased gap for more space between left and right */
     padding-left: 100px;
     padding-right: 100px;
-    background-color: #f9f9f9;
     color: #333;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     max-width: 1200px; /* Optional: Constrain overall width for better centering */

@@ -1,12 +1,10 @@
 // components/PhotoGallery.js
 import React, { useState } from 'react';
 import '../styles/Photo.css';
-import photo1 from '../../assets/photo1.png';
-import photo2 from '../../assets/photo2.png';
-import photo3 from '../../assets/photo3.png';
-import photo4 from '../../assets/photo4.png';
-import photo5 from '../../assets/photo5.png';
-import photo6 from '../../assets/photo6.png';
+import photo1 from '../../assets/photo.jpg';
+import photo2 from '../../assets/photo1.jpg';
+import photo3 from '../../assets/photo2.jpg';
+import photo4 from '../../assets/photo4.jpg';
 
 function PhotoGallery() {
   const images = [
@@ -14,8 +12,6 @@ function PhotoGallery() {
     { src:photo2, alt: 'Rootach hand close-up' },
     { src:photo3, alt: 'Rootach hand close-up' },
     { src:photo4, alt: 'Rootach hand close-up' },
-    { src:photo5, alt: 'Rootach hand close-up' },
-    { src:photo6, alt: 'Rootach hand close-up' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +40,7 @@ function PhotoGallery() {
   };
 
   return (
-    <div className="gallery-section">
+    <div id="gallery" className="gallery-section">
       <h2 className="gallery-title">Our Project Gallery</h2>
       <p className="gallery-description">Showcasing our achievements and beautiful work.</p>
 
